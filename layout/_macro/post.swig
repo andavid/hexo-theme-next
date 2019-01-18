@@ -209,7 +209,6 @@
           {% endif %}
 
           {% if config.symbols_count_time.symbols or config.symbols_count_time.time %}
-            <div class="post-symbolscount">
               {% if not theme.symbols_count_time.separated_meta %}
                 <span class="post-meta-divider">|</span>
               {% endif %}
@@ -219,7 +218,7 @@
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 {% if theme.symbols_count_time.item_text_post %}
-                  <span class="post-meta-item-text">{{ __('symbols_count_time.count') + __('symbol.colon') }}</span>
+                  <span class="post-meta-item-text">{{ __('symbols_count_time.count') }}</span>
                 {% endif %}
                 <span title="{{ __('symbols_count_time.count') }}">{#
                 #}{{ symbolsCount(post.content) }}{#
@@ -241,7 +240,6 @@
                 #}{{ symbolsTime(post.content, theme.symbols_count_time.awl, theme.symbols_count_time.wpm, __('symbols_count_time.time_minutes')) }}{#
               #}</span>
               {% endif %}
-            </div>
           {% endif %}
 
           {% if post.description and (not theme.excerpt_description or not is_index) %}
